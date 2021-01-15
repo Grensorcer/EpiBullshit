@@ -7,7 +7,7 @@ VALID_FILE="../data/valid.txt"
 
 CUDA_VISIBLE_DEVICES=$N
 
-python ../src/run_clm.py \
+python run_clm.py \
     --output_dir=$OUTPUT_DIR \
     --model_type=gpt2 \
     --model_name_or_path=gpt2 \
