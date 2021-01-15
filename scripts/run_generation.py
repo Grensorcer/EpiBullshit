@@ -372,7 +372,10 @@ def run(args):
         )
 
         generated_sequences.append(total_sequence)
+        del text
+        del total_sequence
 
+    del output_sequences
     return generated_sequences
 
 
@@ -402,4 +405,7 @@ if __name__ == "__main__":
         num_return_sequences = random.randint(5, 50)
         sequences = main(length, prompt, k, num_return_sequences)
         horoscopes[zodiac] = random.choice(sequences)
-    print(horoscopes)
+        del sequences
+
+    for horoscope in horoscopes.values():
+        print(horoscope)
